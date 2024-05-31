@@ -16,7 +16,7 @@
 
 <div>
     <h4 align="center">
-        • <a href="https://github.com/wang-chaoyang/SemFlow" target='_blank'>[arXiv]</a> •
+        • <a href="https://arxiv.org/abs/2405.20282" target='_blank'>[arXiv]</a> •
     </h4>
 </div>
 
@@ -55,7 +55,7 @@ If you find this work useful for your research, please consider citing our paper
 @article{wang2024semflow,
   author = {Wang, Chaoyang and Li, Xiangtai and Qi, Lu and Ding, Henghui and Tong, Yunhai and Yang, Ming-Hsuan},
   title = {SemFlow: Binding Semantic Segmentation and Image Synthesis via Rectified Flow},
-  journal = {arXiv},
+  journal = {arXiv preprint arXiv:2405.20282},
   year = {2024}
 }
 ```
