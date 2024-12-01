@@ -1,0 +1,86 @@
+pretrain_model:   # 'dataset/pretrain/stable-diffusion-v1-5'
+resume_from_checkpoint: latest
+eval_only: False
+mode: 'semantic' 
+db: city
+
+pa:        
+   k: 6
+   s: 50
+
+pert:       
+   t: u     
+   co: 0.1
+
+cfg:
+   cond_prob: 0
+   guide: 1
+   image_guide: 1 
+   text: null
+   continus: true
+   sampler: ddpm
+
+env:
+   output_dir: work_dirs/semflow
+   logging_dir: 'log'
+   report_to: 'tensorboard'
+   gradient_accumulation_steps: 1
+   seed: 123
+   mixed_precision: 'bf16'
+   deepspeed: True
+   allow_tf32: False
+   scale_lr: False
+   use_xformers: False
+   ema: False
+   max_train_steps: 8000
+   max_grad_norm: 1.0
+   checkpointing_steps: 10000
+   size: 5120
+   val_iter: 1000
+   splsave: false 
+   quickval:
+   lossmask: false
+   vis: true
+
+
+
+train:
+   batch_size: 32
+   num_workers: 8
+   find_unused_parameters: False
+   gradient_checkpointing: False
+
+
+
+eval:
+   mask_th: 0.5
+   count_th: 512
+   overlap_th: 0.5
+   batch_size: 8
+   num_workers: 8
+   
+
+optim:
+   name: adamw
+   lr: 5.0e-5
+   beta1: 0.9
+   beta2: 0.999
+   weight_decay: 0.01
+   epsilon: 1.0e-08
+
+
+
+lr_scheduler:
+   name: linear
+   final_lr: 0.000001
+   warmup_steps: 500
+
+
+transformation:
+   flip: True
+   crop: random
+
+
+ds_base:
+   ignore_label: 0
+

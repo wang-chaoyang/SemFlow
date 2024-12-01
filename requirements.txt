@@ -1,0 +1,13 @@
+torch==2.1.0
+torchvision
+accelerate==0.25.0
+diffusers==0.25.0
+huggingface-hub==0.25.0
+deepspeed
+numpy~=1.26.0
+transformers
+imageio
+einops
+tqdm
+omegaconf
+opencv-python
